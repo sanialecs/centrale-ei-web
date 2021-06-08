@@ -2,10 +2,10 @@ const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const jsonErrorHandler = require("./services/jsonErrorHandler");
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const routeNotFoundJsonHandler = require("./services/routeNotFoundJsonHandler");
+const jsonErrorHandler = require("./services/jsonErrorHandler");
 
 mongoose.connect(process.env.MONGO_DB_URL, {
   useNewUrlParser: true,
