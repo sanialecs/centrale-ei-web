@@ -1,6 +1,7 @@
 <template>
   <h1>Users</h1>
-  <UsersTable v-if="users.length" :users="users" />
+  <AddUser @userAdded="fetchUsers()" />
+  <UsersTable v-if="users.length" :users="users" @userDeleted="fetchUsers()" />
   <div v-if="usersLoadingError">{{ usersLoadingError }}</div>
 </template>
 
@@ -8,10 +9,12 @@
 // @ is an alias to /src
 import UsersTable from "@/components/UsersTable.vue";
 import axios from "axios";
+import AddUser from "./AddUser.vue";
 
 export default {
   name: "Users",
   components: {
+    AddUser,
     UsersTable,
   },
   data: function () {

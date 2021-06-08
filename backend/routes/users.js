@@ -31,4 +31,14 @@ router.post("/new", function (req, res) {
     });
 });
 
+router.delete("/:userId", function (req, res) {
+  UserModel.deleteOne({ _id: req.params.userId })
+    .then(function () {
+      res.status(204).json({ message: "User successfully deleted" });
+    })
+    .catch(function () {
+      res.status(500).json({ message: "Error while deleting the user" });
+    });
+});
+
 module.exports = router;
