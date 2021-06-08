@@ -3,6 +3,9 @@
 // that needs to have four arguments as opposed to a regular middleware.
 // eslint-disable-next-line no-unused-vars
 const jsonErrorHandler = function (error, req, res, next) {
+  console.error(error);
+  if (res.headersSent) return next(error);
+
   if (process.env.NODE_ENV === "development") {
     return res.status(500).json({
       message: error.toString(),

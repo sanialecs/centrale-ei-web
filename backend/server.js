@@ -19,11 +19,11 @@ app.use(logger("dev"));
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(jsonErrorHandler);
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use(routeNotFoundJsonHandler);
+app.use(jsonErrorHandler);
 
 const port = parseInt(process.env.PORT || "3000");
 
