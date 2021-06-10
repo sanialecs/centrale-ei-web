@@ -8,8 +8,8 @@
 <script>
 // @ is an alias to /src
 import UsersTable from "@/components/UsersTable.vue";
+import AddUser from "@/components/AddUser.vue";
 import axios from "axios";
-import AddUser from "./AddUser.vue";
 
 export default {
   name: "Users",
