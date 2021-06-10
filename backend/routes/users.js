@@ -21,6 +21,7 @@ router.post("/new", function (req, res) {
       res.status(201).json(newDocument);
     })
     .catch(function (error) {
+      console.error(error);
       if (error.code === 11000) {
         res.status(400).json({
           message: `User with email "${newUser.email}" already exists`,
