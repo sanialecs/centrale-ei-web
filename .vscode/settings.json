@@ -2,19 +2,11 @@
   "editor.formatOnSave": true,
   "eslint.format.enable": true,
   "eslint.workingDirectories": [{ "mode": "auto" }],
-  "[html]": {
+  "volar.codeLens.references": false,
+  "[html][json][md]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[javascript]": {
+  "[javascript][vue]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[vue]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[md]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
