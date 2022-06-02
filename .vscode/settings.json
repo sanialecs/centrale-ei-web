@@ -3,6 +3,8 @@
   "eslint.format.enable": true,
   "eslint.workingDirectories": [{ "mode": "auto" }],
   "volar.codeLens.references": false,
+  "volar.completion.preferredTagNameCase": "pascal",
+  "volar.completion.preferredAttrNameCase": "camel",
   "[html][json][md]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
